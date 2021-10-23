@@ -3,11 +3,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-
 module.exports = {
   entry: {
     background: "./src/background.js",
-    falabellaCo: "./src/stores/falabella_co/falabella-co.js",
+    'stores/falabellaCo': ["./src/stores/falabella_co/falabella-co.js", "./src/stores/falabella_co/falabella-co.css"],
   },
   resolve: {
     extensions: [".js", ".css"],
@@ -40,7 +39,7 @@ module.exports = {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
+      filename: '[name].css'
     }),
   ],
   output: {

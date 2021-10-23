@@ -9,8 +9,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.falabella.com.co/falabella-co/product/*"],
-      "js": ["falabellaCo.js"],
-      "css": ["css/falabellaCo.css"]
+      "js": ["stores/falabellaCo.js"],
+      "css": ["stores/falabellaCo.css"]
     }
   ],
   "permissions": ["storage", "activeTab", "scripting"],

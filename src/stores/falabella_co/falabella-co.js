@@ -1,5 +1,4 @@
 console.log("Pika run on falabella Colombia");
-import "./falabella-co.css";
 
 const contents = document.getElementsByClassName("productContainer");
 
