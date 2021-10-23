@@ -1,4 +1,5 @@
 console.log("Pika run on falabella Colombia");
+import "./falabella-co.css";
 
 const contents = document.getElementsByClassName("productContainer");
 
@@ -9,8 +10,8 @@ if (contents[0]) {
   pikaRoot.classList.add("pika-root");
   content.parentElement.insertBefore(pikaRoot, content.nextElementSibling);
   console.log("pika", content);
+  chrome.runtime.sendMessage("product:5555555", (response) => {
+    console.log("pika", response);
+    pikaRoot.innerHTML = response;
+  });
 }
-
-chrome.runtime.sendMessage("product:123", (response) => {
-  console.log('pika', response);
-});
