@@ -5,11 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    background: "./src/background.js",
-    'stores/falabellaCo': ["./src/stores/falabella_co/falabella-co.js", "./src/stores/falabella_co/falabella-co.css"],
+    background: "./src/background.ts",
+    "stores/falabellaCo": ["./src/stores/falabella_co/falabella-co.ts", "./src/stores/falabella_co/falabella-co.css"],
   },
   resolve: {
-    extensions: [".js", ".css"],
+    extensions: [".js", ".css", ".ts"],
   },
   module: {
     rules: [
@@ -28,18 +28,19 @@ module.exports = {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      {
+        test: /\.ts$/,
+        use: ["ts-loader"],
+      },
     ],
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "./src/manifest.json" },
-        { from: "./src/images", to: "icon" },
-      ],
+      patterns: [{ from: "./src/manifest.json" }, { from: "./src/images", to: "icon" }],
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: "[name].css",
     }),
   ],
   output: {

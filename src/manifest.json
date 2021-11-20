@@ -13,7 +13,7 @@
       "css": ["stores/falabellaCo.css"]
     }
   ],
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting", "management"],
   "icons": {
     "16": "/icon/get_started16.png",
     "32": "/icon/get_started32.png",
