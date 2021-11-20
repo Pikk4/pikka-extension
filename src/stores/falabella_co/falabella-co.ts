@@ -1,5 +1,3 @@
-console.log("Pika run on falabella Colombia");
-
 const contents = document.getElementsByClassName("productContainer");
 
 if (contents[0]) {
@@ -8,9 +6,7 @@ if (contents[0]) {
   pikaRoot.setAttribute("id", "pika");
   pikaRoot.classList.add("pika-root");
   content.parentElement.insertBefore(pikaRoot, content.nextElementSibling);
-  console.log("pika", content);
-  chrome.runtime.sendMessage("product:5555555", (response) => {
-    console.log("pika", response);
-    pikaRoot.innerHTML = response;
-  });
+  // chrome.runtime.sendMessage("product:5555555", (response) => {
+  //   pikaRoot.innerHTML = response;
+  // });
 }
