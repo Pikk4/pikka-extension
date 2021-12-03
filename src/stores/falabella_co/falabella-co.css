@@ -1,6 +1,11 @@
 .pika-root {
     margin-top: 20px;
     width: 100%;
-    min-height: 300px;
     background: white;
+    padding: 16px;
+}
+
+.pika-root__title {
+    text-align: center;
+    margin-top: 10px;
 }
